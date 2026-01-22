@@ -1,6 +1,5 @@
 import './styles/main.css';
 
-
 import Navbar from './components/navbar/Navbar';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
@@ -27,7 +26,6 @@ function App() {
           </ul>
         </div>
       </main>
-      ;
       <Footer />
     </div>
   );
