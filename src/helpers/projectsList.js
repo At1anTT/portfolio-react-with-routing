@@ -50,14 +50,12 @@ const projects = [
     img: project05,
     imgBig: project05Big,
     skills: 'React Native',
-    gitHubLink: 'https://github.com',
   },
   {
     title: 'Gaming community',
     img: project06,
     imgBig: project06Big,
     skills: 'React Native',
-    gitHubLink: 'https://github.com',
   },
 ];
 

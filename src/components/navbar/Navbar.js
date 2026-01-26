@@ -1,39 +1,52 @@
-import sun from './../../img/icons/sun.svg';
-import moon from './../../img/icons/moon.svg';
+import { NavLink } from 'react-router-dom';
+import BtnDarkMode from '../btnDarkMode/BtnDarkMode';
+
 import './style.css';
 
 function Navbar() {
+  const activeLink = 'nav-list__link nav-list__link--active';
+  const normalLink = 'nav-list__link';
+
   return (
     <nav className="nav">
       <div class="container">
         <div class="nav-row">
-          <a href="./index.html" class="logo">
+          <NavLink to="/" className="logo">
             <strong>Freelancer</strong> portfolio
-          </a>
+          </NavLink>
 
-          <button class="dark-mode-btn">
-            <img src={sun} alt="Light mode" class="dark-mode-btn__icon" />
-            <img src={moon} alt="Dark mode" class="dark-mode-btn__icon" />
-          </button>
+          <BtnDarkMode />
 
           <ul class="nav-list">
             <li class="nav-list__item">
-              <a
-                href="./index.html"
-                class="nav-list__link nav-list__link--active"
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? activeLink : normalLink
+                }
               >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li class="nav-list__item">
-              <a href="./projects.html" class="nav-list__link">
+              <NavLink
+                to="/projects"
+                className={({ isActive }) =>
+                  isActive ? activeLink : normalLink
+                }
+              >
                 Projects
-              </a>
+              </NavLink>
             </li>
             <li class="nav-list__item">
-              <a href="./contacts.html" class="nav-list__link">
+              <NavLink
+                to="/contacts"
+                className={({ isActive }) =>
+                  isActive ? activeLink : normalLink
+                }
+              >
                 Contacts
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
